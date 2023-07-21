@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  /* Estilos para el menú de navegación */
+  nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin: 10px;
+  }
+  
+  nav ul li a{
+    text-decoration: none;
+}
+
+  nav ul li a:link,
+  nav ul li a:visited {
+    color: black;
+    margin: 0 20px;
+    padding: 10px 25px;
+    background-color: bisque;
+    border-radius: 7px;
+  }
+  
+  nav ul li a:hover,
+  nav ul li a:active {
+    background-color: rgb(255, 209, 154);
+  }
+  
+  /* Estilos para la sección principal */
+  section#principal {
+    background-image: url(/JulianMirandaR.github.io/Images/fondo1.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 1px 1px 1px beige;
+    height: 100vh;
+  }
+  
+  section#principal h1 {
+    font-size: 5rem;
+  }
+  
+  section#principal h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  img#perfil {
+    border-radius: 1000px;
+    width: 300px;
+    height: 300px;
+  }
+  
+  /* Estilos para la cabecera */
+  header {
+    position: sticky;
+    top: 0;
+    padding: 20px;
+    background-color: black;
+  }
+  
+  /* Estilos para la sección "Sobre Mi" */
+  section#sobremi {
+    background-color: bisque;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .texto {
+    margin: 0 40px;
+    text-align: justify;
+  }
+  
+  .texto p {
+    font-size: 1.5rem;
+  }
+  
+  section#sobremi a:link,
+  section#sobremi a:visited {
+    text-decoration: none;
+    color: black;
+  }
+  
+  section#sobremi .detalles-proyecto:hover,
+  section#sobremi .detalles-proyecto:active {
+    background-color: rgb(250, 250, 219);
+  }
+  
+  .lista-proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .detalles-proyecto {
+    border: 5px solid black;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    border-radius: 17px;
+  }
+  
+  .detalles-proyecto img {
+    width: 100%;
+    height: 80px;
+    border-radius: 10px;
+  }
+  
+  /* Estilos para la sección de contacto */
+  section#contacto {
+    background: linear-gradient(black, bisque);
+  }
+  
+  section#contacto h1,
+  section#contacto h2 {
+    color: azure;
+    text-align: center;
+    text-shadow: 1px 1px 1px black;
+  }
+  
+  dl {
+    margin: 10px auto;
+    width: 350px;
+    padding: 10px 20px;
+    background-color: aliceblue;
+    border-radius: 20px;
+    border: 2px solid black;
+  }
+  
+  form {
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: aliceblue;
+    max-width: 400px;
+    border-radius: 20px;
+    border: 2px solid black;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    background-color: rgb(247, 234, 218);
+    border: 1px solid black;
+    border-radius: 2px;
+  }
+  
+  form button {
+    background-color: bisque;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 3px;
+  }
+  
+  /* Estilos generales para pantallas más pequeñas */
+  @media screen and (max-width: 768px) {
+    /* Ajustar el tamaño del texto en el menú */
+    nav ul li a {
+      font-size: 0.9rem;
+    }
+  
+    /* Ajustar el tamaño de las imágenes */
+    img#perfil {
+      width: 200px;
+      height: 200px;
+    }
+  
+    /* Ajustar el tamaño del formulario */
+    form {
+      max-width: 300px;
+    }
+  }

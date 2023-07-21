@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link href="estilos.css" rel="stylesheet"/>
+    <title>Curriculum Vitae</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/JulianMirandaR.github.io/Images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/JulianMirandaR.github.io/Images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+    <header>
+        <nav> 
+            <ul>
+                <li><a href="#principal">Home</a></li>
+                <li><a href="#sobremi">Sobre MI</a></li>
+                <li><a href="#contacto">Contacto</a></li> 
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="principal">
+            <h1>Julian Miranda</h1>
+            <h2>Desarrollador Front-End</h2>
+        </br>
+            <img src="/JulianMirandaR.github.io/Images/imagen.jpg" id="perfil"  >
+        </section>
+           
+        <section id="sobremi">
+
+            <h1>Sobre Mi</h1>
+            
+            <div class="texto">
+                <p>Estudiante trabajador en busca de empleo. Listo para utilizar mis habilidades y pasión para impulsar la misión de una compañía.
+                    Tecnológicamente hábil, ofresco experiencia con muchas plataformas de medios sociales, programas de tecnología de oficina y habilidades informáticas avanzadas. 
+                    Espicificamente experimentado en Front End; JavaScrip y CSS, Python y C#.
+                    Aporto una actitud positiva y la voluntad y motivación para aprender nuevos programas.
+                </p>
+            </div>
+            <br/>
+            <br/>
+            
+            <h1>Proyectos Realizados</h1>
+            <div class="lista-proyectos">
+                <!--ejemplos de proyectos tomados de otros lados-->
+
+                <div class="detalles-proyecto">
+                    <a href="https://julianmirandar.github.io/CalculadorDeDias/">
+                        <img src="/JulianMirandaR.github.io/Images/proyecto1.jpg" alt='proyecto 1'/>
+                        <h3>Proyecto 1</h3>
+                        <p>Contador de dias</p>
+
+                    </a>
+                </div>
+
+                <div class="detalles-proyecto">
+                    <a href="https://julianmirandar.github.io/ColecciondeLibros/">
+                        <img src="/JulianMirandaR.github.io/Images/proyecto2.jpg">
+                        <h3>Proyecto 2</h3>
+                        <p>Stock de libros</p>
+                    </a>
+                </div>
+
+                <div class="detalles-proyecto">
+                    <a href="https://julianmirandar.github.io/Calculadora/">
+                        <img src="/JulianMirandaR.github.io/Images/proyecto3.jpg">
+                        <h3>Proyecto 3</h3>
+                        <p>Calculadora</p>
+                    </a>
+                </div>
+
+                <div class="detalles-proyecto">
+                    <a href="https://julianmirandar.github.io/Presupuesto/">
+                        <img src="/JulianMirandaR.github.io/Images/proyecto4.jpg">
+                        <h3>Proyecto 4</h3>
+                        <p>Presupuesto de gastos</p>
+                    </a>
+                </div>
+            
+            </div>
+        </section>
+
+        <section id="contacto">
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <h1>Mis contactos</h1>
+            <dl>
+                <dt><b>Email:</b></dt>
+                <dd>Juulimiranda@outlook.com</dd>
+                <dt><b>Telefono:</b></dt>
+                <dd>(15)2954313206</dd>
+                <dt><b>Dirección:</b></dt>
+                <dd>Av. San Martin 238</dd>
+            </dl>
+            <br/>
+            <h2>O contactese por aqui</h2>
+                <form action="https://formsubmit.co/95ba775fdc470b3723b73d85fa0ed853" method="POST">
+                    <label for="nombre">Nombre:</label><br/>
+                    <input type="text" id="nombre" name="nombre" required="true"><br/>
+
+                    <label>Apellido:</label><br/>
+                    <input type="text" id="Apellido" name="Apellido" required="true"><br/>
+
+                    <label for="email">Email:</label><br/>
+                    <input type="email" id="email" name="Email" required="true"/><br/>
+
+                    <label>Asunto:</label><br/>
+                    <input type="text" placeholder="Escribe tu asunto" id="asunto" name="asunto"><br/>   
+
+                    <label>Mensaje:</label><br/>
+                    <textarea name="Mensaje" cols="28" rows="4"></textarea>
+                    </br>
+                   <button type="submit" onclick='enviar()'>Enviar</button>
+                   <input type="hidden" name="_next" value="https://julianmirandar.github.io/">
+                   <input type="hidden" name="_captcha" value="false">
+                </form>
+
+        </section>
+    </main>
+
+    <script src="/function.js"></script>
+</body>
+</html>
