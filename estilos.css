@@ -37,7 +37,7 @@
   
   /* Estilos para la sección principal */
   section#principal {
-    background-image: url(/JulianMirandaR.github.io/Images/fondo1.webp);
+    background-image: url(fondo1.webp);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
