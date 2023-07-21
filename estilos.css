@@ -166,22 +166,28 @@ form button {
     border-radius: 3px;
 }
   
-  /* Estilos generales para pantallas más pequeñas */
-  @media screen and (max-width: 768px) {
+
+@media screen and (max-width: 768px) {
     /* Ajustar el tamaño del texto en el menú */
-nav ul li a {
-    font-size: 0.9rem;
-    padding: 6px 16px;
-}
-  
+    nav ul li a {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+    }  
     /* Ajustar el tamaño de las imágenes */
-img#perfil {
+    img#perfil {
         width: 200px;
         height: 200px;
-}
+    }
   
     /* Ajustar el tamaño del formulario */
-form {
+    form {
         max-width: 300px;
-}
+    }
 }
