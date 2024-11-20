@@ -50,7 +50,7 @@ section {
 }
 
 #principal {
-  background: #333 url(images/fondo1.webp) no-repeat center/cover;
+  background: #333 url(Images/fondo1.webp) no-repeat center/cover;
   color: #fff;
   height: 100vh;
   display: flex;
