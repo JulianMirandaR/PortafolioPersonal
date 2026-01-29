@@ -10,6 +10,7 @@ html {
 }
 
 body {
+  font-family: 'Roboto', sans-serif;
   line-height: 1.6;
   color: #333;
   background-color: #f9f9f9;
@@ -54,13 +55,14 @@ section {
 /* HERO */
 #principal {
   background: #333 url(Images/fondo1.webp) no-repeat center / cover;
-  color: #fff;
+  color: #f7f7f7;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 #principal h1 {
@@ -71,6 +73,26 @@ section {
   font-size: clamp(1.2rem, 3vw, 2rem);
   color: #f0f0f0;
   margin-top: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.texto, .detalles-proyecto, #contacto {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+.texto:nth-child(1), .detalles-proyecto:nth-child(1), #contacto:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.detalles-proyecto {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 /* PERFIL */
@@ -106,6 +128,8 @@ section {
   padding: 15px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+  transition: transform 0.3s ease-in-out;
 }
 
 .detalles-proyecto a {
@@ -116,6 +140,7 @@ section {
 .detalles-proyecto:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
 }
 
 .detalles-proyecto img {
@@ -138,10 +163,9 @@ form {
 }
 
 form input,
-form textarea,
-form button {
+form textarea{
   width: 100%;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   padding: 10px;
   border: 1px solid #ddd;
   border-radius: 6px;
@@ -154,15 +178,108 @@ form textarea {
 }
 
 form button {
-  background: #333;
+  background-color: #333;
   color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 form button:hover {
-  background: #575757;
-  transform: scale(1.02);
+  background-color: #555;
+}
+
+.footer {
+  background: #111;
+  color: #ccc;
+  padding: 30px 20px;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.footer p {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.footer-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #f0f0f0;
+  transition: width 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+}
+
+.footer-links a:hover::after {
+  width: 100%;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+nav a.active {
+  color: #fff;
+  font-weight: bold;
+  border-bottom: 2px solid #fff;
+}
+
+#btn-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+  transition: background 0.3s ease;
+}
+
+#btn-top:hover {
+  background: #555;
 }
 
 @media screen and (max-width: 768px) {
@@ -177,6 +294,8 @@ form button:hover {
   #perfil {
     width: 100px;
     height: 100px;
+    border-radius: 50%;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
   }
 
   .detalles-proyecto {
@@ -188,6 +307,12 @@ form button:hover {
   }
 }
 
+@media (max-width: 600px) {
+  .footer-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
 
 @media (max-width: 480px) {
   header nav ul {

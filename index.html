@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link href="estilos.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <title>Curriculum Vitae</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
@@ -17,8 +18,8 @@
     <header>
         <nav> 
             <ul>
-                <li><a href="#principal">Home</a></li>
-                <li><a href="#sobremi">Sobre MI</a></li>
+                <li><a href="#principal">Inicio</a></li>
+                <li><a href="#sobremi">Sobre mí</a></li>
                 <li><a href="#contacto">Contacto</a></li> 
             </ul>
         </nav>
@@ -29,19 +30,19 @@
             <h1>Julian Miranda</h1>
             <h2>Desarrollador Front-End</h2>
         </br>
-            <img src="Images/imagen.jpg" id="perfil"  >
+            <img src="Images/imagen.png" id="perfil"  >
         </section>
          
-        <section id="sobremi">
-            <br/>
-            <br/>  
-            <h1>Sobre Mi</h1>
+        <section id="sobremi" itemscope itemtype="https://schema.org/Person">
+            <h1 itemprop="name">Julian Miranda</h1>
             
             <div class="texto">
-                <p>Estudiante trabajador en busca de empleo. Listo para utilizar mis habilidades y pasión para impulsar la misión de una compañía.
-                    Tecnológicamente hábil, ofresco experiencia con muchas plataformas de medios sociales, programas de tecnología de oficina y habilidades informáticas avanzadas. 
-                    Espicificamente experimentado en Front End; JavaScrip y CSS, Python y C#.
-                    Aporto una actitud positiva y la voluntad y motivación para aprender nuevos programas.
+                <p itemprop="description">Soy estudiante de Analista de Programación con experiencia en programación y soporte técnico.
+                    Poseo sólidos conocimientos en mantenimiento de PC, hardware y software, incluyendo diagnóstico
+                    de fallas, reparación, configuración e instalación de sistemas operativos. Manejo lenguajes de
+                    programación como Python, C, C# y JavaScript, así como conceptos de desarrollo web y bases de
+                    datos. Además, cuento con experiencia en atención al cliente y resolución eficiente de problemas
+                    técnicos, garantizando soluciones claras y rápidas.
                 </p>
             </div>
             <br/>
@@ -50,37 +51,11 @@
             <h1>Proyectos Realizados</h1>
             <div class="lista-proyectos">
                 <!--ejemplos de proyectos tomados de otros lados-->
-
                 <div class="detalles-proyecto">
-                    <a href="https://julianmirandar.github.io/CalculadorDeDias/">
-                        <img src="Images/proyecto1.jpg" alt='proyecto 1'/>
-                        <h3>Proyecto 1</h3>
-                        <p>Contador de dias</p>
-
-                    </a>
-                </div>
-
-                <div class="detalles-proyecto">
-                    <a href="https://julianmirandar.github.io/ColecciondeLibros/">
-                        <img src="Images/proyecto2.jpg">
-                        <h3>Proyecto 2</h3>
-                        <p>Stock de libros</p>
-                    </a>
-                </div>
-
-                <div class="detalles-proyecto">
-                    <a href="https://julianmirandar.github.io/Calculadora/">
-                        <img src="Images/proyecto3.jpg">
-                        <h3>Proyecto 3</h3>
-                        <p>Calculadora</p>
-                    </a>
-                </div>
-
-                <div class="detalles-proyecto">
-                    <a href="https://julianmirandar.github.io/Presupuesto/">
-                        <img src="Images/proyecto4.jpg">
-                        <h3>Proyecto 4</h3>
-                        <p>Presupuesto de gastos</p>
+                    <a href="https://deliveryanguil.com">
+                        <img src="Images/Imagen de WhatsApp 2024-11-20 a las 11.03.05_b39b486e.jpg">
+                        <h3>Proyecto 6</h3>
+                        <p>Delivery de Alcohol</p>
                     </a>
                 </div>
                 <div class="detalles-proyecto">
@@ -91,22 +66,42 @@
                     </a>
                 </div>
                 <div class="detalles-proyecto">
-                    <a href="deliveryangui.site">
-                        <img src="Images/Imagen de WhatsApp 2024-11-20 a las 11.03.05_b39b486e.jpg">
-                        <h3>Proyecto 6</h3>
-                        <p>Delivery de Alcohol</p>
+                    <a href="https://julianmirandar.github.io/Presupuesto/">
+                        <img src="Images/proyecto4.jpg">
+                        <h3>Proyecto 4</h3>
+                        <p>Presupuesto de gastos</p>
                     </a>
                 </div>
+                <div class="detalles-proyecto">
+                    <a href="https://julianmirandar.github.io/Calculadora/">
+                        <img src="Images/proyecto3.jpg">
+                        <h3>Proyecto 3</h3>
+                        <p>Calculadora</p>
+                    </a>
+                </div>
+                <div class="detalles-proyecto">
+                    <a href="https://julianmirandar.github.io/ColecciondeLibros/">
+                        <img src="Images/proyecto2.jpg">
+                        <h3>Proyecto 2</h3>
+                        <p>Stock de libros</p>
+                    </a>
+                </div>
+
+                <div class="detalles-proyecto">
+                    <a href="https://julianmirandar.github.io/CalculadorDeDias/">
+                        <img src="Images/proyecto1.jpg" alt='proyecto 1'/>
+                        <h3>Proyecto 1</h3>
+                        <p>Contador de dias</p>
+
+                    </a>
+                </div>
+
             
             </div>
             <br/> 
         </section>
 
         <section id="contacto">
-            <br/>
-            <br/>
-            <br/>
-            <br/>
             <h1>Mis contactos</h1>
             <dl>
                 <dt><b>Email:</b></dt>
@@ -142,6 +137,19 @@
 
         </section>
     </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2026 Julian Miranda — Desarrollador Front-End</p>
+
+            <div class="footer-links">
+                <a href="https://github.com/julianmirandar" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/juli-miranda-r" target="_blank">LinkedIn</a>
+            <a href="#contacto" target="_blank">Contacto</a>
+        </div>
+        </div>
+    </footer>
+    <button id="btn-top">↑</button>
 
     <script src="function.js"></script>
 </body>
