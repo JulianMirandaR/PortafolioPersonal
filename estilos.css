@@ -72,11 +72,12 @@ section {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(13, 17, 23, 0.75); /* GitHub dark */
+  background: rgba(13, 17, 23, 0.75);
+  /* GitHub dark */
   z-index: 1;
 }
 
-#principal > * {
+#principal>* {
   position: relative;
   z-index: 2;
 }
@@ -91,7 +92,9 @@ section {
   margin-top: 10px;
 }
 
-.texto, .detalles-proyecto, #contacto {
+.texto,
+.detalles-proyecto,
+#contacto {
   opacity: 0;
   animation: fadeIn 1s forwards;
 }
@@ -136,32 +139,101 @@ section {
   margin: 0 auto;
 }
 
+/* Modificación de la tarjeta para que se adapte al slide */
 .detalles-proyecto {
+  width: 100%;
+  max-width: 300px;
+  /* Un poco más chicos */
+  margin: 0 auto;
+  height: 100%;
   background: #161b22;
   border: 1px solid #30363d;
   border-radius: 12px;
-  padding: 15px;
-  text-align: center;
+  overflow: hidden;
+  /* Para que la imagen respete borde */
+  display: flex;
+  flex-direction: column;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.detalles-proyecto a {
-  text-decoration: none;
-  color: #c9d1d9;
 }
 
 .detalles-proyecto:hover {
   transform: translateY(-6px);
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
   border-color: #58a6ff;
 }
 
 .detalles-proyecto img {
   width: 100%;
-  height: auto;
-  min-height: 90px;
-  border-radius: 8px;
+  height: 220px;
+  /* Aumentamos la altura para mostrar más contenido */
   object-fit: cover;
+  object-position: top center;
+  /* Alineamos arriba para que se vea el encabezado del proyecto */
+  border-bottom: 1px solid #30363d;
+  border-radius: 0;
+  /* Quitar radio inferior */
+}
+
+.contenido-proyecto {
+  padding: 20px;
+  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: left;
+}
+
+.contenido-proyecto h3 {
+  color: #c9d1d9;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.contenido-proyecto p {
+  font-size: 0.9rem;
+  color: #8b949e;
+  margin-bottom: 20px;
+  flex-grow: 1;
+  /* Empuja los botones al fondo */
+  line-height: 1.5;
+}
+
+.botones-proyecto {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.btn-proyecto {
+  flex: 1;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.btn-proyecto.demo {
+  background-color: #238636;
+  color: #ffffff;
+  border: 1px solid rgba(240, 246, 252, 0.1);
+}
+
+.btn-proyecto.demo:hover {
+  background-color: #2ea043;
+}
+
+.btn-proyecto.codigo {
+  background-color: #21262d;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
+}
+
+.btn-proyecto.codigo:hover {
+  background-color: #30363d;
+  color: #58a6ff;
 }
 
 /* CONTACTO */
@@ -276,11 +348,11 @@ nav a.active {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
   }
 
   .detalles-proyecto {
-    width: 100px;
+    width: 100%;
   }
 
   form {
@@ -302,5 +374,54 @@ nav a.active {
 
   .detalles-proyecto {
     padding: 12px;
+  }
+}
+
+.swiper {
+  width: 100%;
+  max-width: 1040px;
+  padding: 50px 20px 80px 20px;
+}
+
+/* Forzar la paginación abajo del todo */
+.swiper-pagination {
+  bottom: 10px !important;
+}
+
+.swiper-wrapper {
+  /* align-items: stretch; Removed stretch */
+  padding: 20px 0px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  /* Permite que todos los slides tengan la misma altura */
+}
+
+
+/* Paginación (Puntos) */
+.swiper-pagination-bullet {
+  background: #8b949e;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: #58a6ff;
+  opacity: 1;
+}
+
+/* Navegación (Flechas) */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #58a6ff;
+}
+
+/* Ajustes Responsive para el carrusel */
+/* Ajustes Responsive para el carrusel */
+@media (max-width: 768px) {
+  .swiper {
+    padding: 30px 10px 80px 10px;
   }
 }
