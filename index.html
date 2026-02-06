@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link href="estilos.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <title>Curriculum Vitae</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -48,55 +48,109 @@
             <br/>
             <br/>
             
-            <h1>Proyectos Realizados</h1>
-            <div class="lista-proyectos">
-                <!--ejemplos de proyectos tomados de otros lados-->
-                <div class="detalles-proyecto">
-                    <a href="https://deliveryanguil.com">
-                        <img src="Images/Imagen de WhatsApp 2024-11-20 a las 11.03.05_b39b486e.jpg">
-                        <h3>Proyecto 6</h3>
-                        <p>Delivery de Alcohol</p>
-                    </a>
+            <!-- Swiper Carousel -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <!-- Proyecto 7 -->
+                    <div class="swiper-slide">
+                        <div class="detalles-proyecto">
+                            <img src="Images/Imagen de WhatsApp 2024-11-20 a las 11.03.05_b39b486e.jpg" alt="Delivery de Alcohol">
+                            <div class="contenido-proyecto">
+                                <h3>Delivery de Alcohol</h3>
+                                <p>Plataforma web para realizar pedidos de bebidas a domicilio de forma rápida y sencilla.</p>
+                                <div class="botones-proyecto">
+                                    <a href="https://deliveryanguil.com" target="_blank" class="btn-proyecto demo">Ver Demo</a>
+                                    <!-- Agrega tu link de GitHub real aquí -->
+                                    <a href="https://github.com/julianmirandar" target="_blank" class="btn-proyecto codigo">Código</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Proyecto 6 -->
+                    <div class="swiper-slide">
+                        <div class="detalles-proyecto">
+                            <img src="Images/408597834_738694114961833_3802447340266474291_n (1).jpg" alt="Municipalidad de Anguil">
+                            <div class="contenido-proyecto">
+                                <h3>Muni. de Anguil</h3>
+                                <p>Sitio web informativo para la municipalidad, con noticias y servicios para el ciudadano.</p>
+                                <div class="botones-proyecto">
+                                    <a href="https://julianmirandar.github.io/Anguil/" target="_blank" class="btn-proyecto demo">Ver Demo</a>
+                                    <a href="https://github.com/julianmirandar/Anguil" target="_blank" class="btn-proyecto codigo">Código</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Proyecto 5 -->
+                    <div class="swiper-slide">
+                        <div class="detalles-proyecto">
+                            <img src="Images/Microsoft_Office_Excel_(2019–present).svg.png" alt="Actualizador de Precios">
+                            <div class="contenido-proyecto">
+                                <h3>Actualizador Precios</h3>
+                                <p>Herramienta automatizada para actualizar listas de precios de productos masivamente.</p>
+                                <div class="botones-proyecto">
+                                    <a href="https://julianmirandar.github.io/Actualizacion-de-precios/" target="_blank" class="btn-proyecto demo">Ver Demo</a>
+                                    <a href="https://github.com/julianmirandar/Actualizacion-de-precios" target="_blank" class="btn-proyecto codigo">Código</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Proyecto 4 -->
+                    <div class="swiper-slide">
+                        <div class="detalles-proyecto">
+                            <img src="Images/proyecto4.jpg" alt="Presupuesto de gastos">
+                            <div class="contenido-proyecto">
+                                <h3>Gestor de Gastos</h3>
+                                <p>Aplicación para llevar un control detallado de ingresos y egresos personales.</p>
+                                <div class="botones-proyecto">
+                                    <a href="https://julianmirandar.github.io/Presupuesto/" target="_blank" class="btn-proyecto demo">Ver Demo</a>
+                                    <a href="https://github.com/julianmirandar/Presupuesto" target="_blank" class="btn-proyecto codigo">Código</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Proyecto 3 -->
+                    <div class="swiper-slide">
+                        <div class="detalles-proyecto">
+                            <img src="Images/proyecto3.jpg" alt="Calculadora">
+                            <div class="contenido-proyecto">
+                                <h3>Calculadora Web</h3>
+                                <p>Calculadora funcional desarrollada con JavaScript para operaciones matemáticas básicas.</p>
+                                <div class="botones-proyecto">
+                                    <a href="https://julianmirandar.github.io/Calculadora/" target="_blank" class="btn-proyecto demo">Ver Demo</a>
+                                    <a href="https://github.com/julianmirandar/Calculadora" target="_blank" class="btn-proyecto codigo">Código</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Proyecto 2 -->
+                    <div class="swiper-slide">
+                        <div class="detalles-proyecto">
+                            <img src="Images/proyecto2.jpg" alt="Stock de libros">
+                            <div class="contenido-proyecto">
+                                <h3>Stock de Libros</h3>
+                                <p>Sistema de inventario para gestionar una colección de libros y su disponibilidad.</p>
+                                <div class="botones-proyecto">
+                                    <a href="https://julianmirandar.github.io/ColecciondeLibros/" target="_blank" class="btn-proyecto demo">Ver Demo</a>
+                                    <a href="https://github.com/julianmirandar/ColecciondeLibros" target="_blank" class="btn-proyecto codigo">Código</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Proyecto 1 -->
+                    <div class="swiper-slide">
+                        <div class="detalles-proyecto">
+                            <img src="Images/proyecto1.jpg" alt='Contador de dias'/>
+                            <div class="contenido-proyecto">
+                                <h3>Contador de Días</h3>
+                                <p>Utilidad para calcular la diferencia de días entre dos fechas específicas.</p>
+                                <div class="botones-proyecto">
+                                    <a href="https://julianmirandar.github.io/CalculadorDeDias/" target="_blank" class="btn-proyecto demo">Ver Demo</a>
+                                    <a href="https://github.com/julianmirandar/CalculadorDeDias" target="_blank" class="btn-proyecto codigo">Código</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="detalles-proyecto">
-                    <a href="https://julianmirandar.github.io/ModificadorExcel/">
-                        <img src="Images/Microsoft_Office_Excel_(2019–present).svg.png">
-                        <h3>Proyecto 5</h3>
-                        <p>Actualizador de Precios</p>
-                    </a>
-                </div>
-                <div class="detalles-proyecto">
-                    <a href="https://julianmirandar.github.io/Presupuesto/">
-                        <img src="Images/proyecto4.jpg">
-                        <h3>Proyecto 4</h3>
-                        <p>Presupuesto de gastos</p>
-                    </a>
-                </div>
-                <div class="detalles-proyecto">
-                    <a href="https://julianmirandar.github.io/Calculadora/">
-                        <img src="Images/proyecto3.jpg">
-                        <h3>Proyecto 3</h3>
-                        <p>Calculadora</p>
-                    </a>
-                </div>
-                <div class="detalles-proyecto">
-                    <a href="https://julianmirandar.github.io/ColecciondeLibros/">
-                        <img src="Images/proyecto2.jpg">
-                        <h3>Proyecto 2</h3>
-                        <p>Stock de libros</p>
-                    </a>
-                </div>
-
-                <div class="detalles-proyecto">
-                    <a href="https://julianmirandar.github.io/CalculadorDeDias/">
-                        <img src="Images/proyecto1.jpg" alt='proyecto 1'/>
-                        <h3>Proyecto 1</h3>
-                        <p>Contador de dias</p>
-
-                    </a>
-                </div>
-
-            
             </div>
             <br/> 
         </section>
@@ -151,6 +205,7 @@
     </footer>
     <button id="btn-top">↑</button>
 
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="function.js"></script>
 </body>
 </html>
