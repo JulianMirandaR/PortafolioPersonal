@@ -7,7 +7,9 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <link href="estilos.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
     <title>Curriculum Vitae</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
@@ -20,6 +22,7 @@
             <ul>
                 <li><a href="#principal">Inicio</a></li>
                 <li><a href="#sobremi">Sobre mí</a></li>
+                <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#contacto">Contacto</a></li> 
             </ul>
         </nav>
@@ -28,7 +31,7 @@
     <main>
         <section id="principal">
             <h1>Julian Miranda</h1>
-            <h2>Desarrollador Front-End</h2>
+            <h2><span id="typewriter"></span><span class="cursor">|</span></h2>
         </br>
             <img src="Images/imagen.png" id="perfil"  >
         </section>
@@ -40,11 +43,47 @@
                 <p itemprop="description">Soy estudiante de Analista de Programación con experiencia en programación y soporte técnico.
                     Poseo sólidos conocimientos en mantenimiento de PC, hardware y software, incluyendo diagnóstico
                     de fallas, reparación, configuración e instalación de sistemas operativos. Manejo lenguajes de
-                    programación como Python, C, C# y JavaScript, así como conceptos de desarrollo web y bases de
+                    programación como Python, C# y JavaScript, así como conceptos de desarrollo web y bases de
                     datos. Además, cuento con experiencia en atención al cliente y resolución eficiente de problemas
                     técnicos, garantizando soluciones claras y rápidas.
                 </p>
             </div>
+            
+            <div class="skills-container">
+                <h3>Mis Herramientas</h3>
+                <div class="skills-grid">
+                    <i class="devicon-html5-plain colored" title="HTML5"></i>
+                    <i class="devicon-css3-plain colored" title="CSS3"></i>
+                    <i class="devicon-javascript-plain colored" title="JavaScript"></i>
+                    <i class="devicon-python-plain colored" title="Python"></i>
+                    <i class="devicon-csharp-plain colored" title="C#"></i>
+                    <i class="devicon-git-plain colored" title="Git"></i>
+                    <i class="devicon-github-original colored" title="GitHub"></i>
+                    <i class="devicon-mongodb-plain colored" title="MongoDB"></i>
+                    <i class="devicon-vscode-plain colored" title="VS Code"></i>
+                </div>
+            </div>
+
+            <section id="servicios">
+                <h2>Lo que ofrezco</h2>
+                <div class="servicios-grid">
+                    <div class="servicio-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Desarrollo Web</h3>
+                        <p>Creación de sitios modernos, responsivos y optimizados.</p>
+                    </div>
+                    <div class="servicio-card">
+                        <i class="fas fa-tools"></i>
+                        <h3>Soporte Técnico</h3>
+                        <p>Resolución de problemas de hardware y software.</p>
+                    </div>
+                    <div class="servicio-card">
+                        <i class="fas fa-server"></i>
+                        <h3>Mantenimiento</h3>
+                        <p>Diagnóstico, reparación y configuración de equipos.</p>
+                    </div>
+                </div>
+            </section>
             <br/>
             <br/>
             
@@ -58,10 +97,15 @@
                             <div class="contenido-proyecto">
                                 <h3>Delivery de Alcohol</h3>
                                 <p>Plataforma web para realizar pedidos de bebidas a domicilio de forma rápida y sencilla.</p>
+                                <div class="badges">
+                                    <span class="badge html">HTML</span>
+                                    <span class="badge css">CSS</span>
+                                    <span class="badge js">JS</span>
+                                </div>
                                 <div class="botones-proyecto">
                                     <a href="https://deliveryanguil.com" target="_blank" class="btn-proyecto demo">Ver Demo</a>
                                     <!-- Agrega tu link de GitHub real aquí -->
-                                    <a href="https://github.com/julianmirandar" target="_blank" class="btn-proyecto codigo">Código</a>
+                                    <a href="https://github.com/JulianMirandaR/CatalogoAlcohol.git" target="_blank" class="btn-proyecto codigo">Código</a>
                                 </div>
                             </div>
                         </div>
@@ -73,9 +117,14 @@
                             <div class="contenido-proyecto">
                                 <h3>Muni. de Anguil</h3>
                                 <p>Sitio web informativo para la municipalidad, con noticias y servicios para el ciudadano.</p>
+                                <div class="badges">
+                                    <span class="badge html">HTML</span>
+                                    <span class="badge css">CSS</span>
+                                    <span class="badge js">JS</span>
+                                </div>
                                 <div class="botones-proyecto">
                                     <a href="https://julianmirandar.github.io/Anguil/" target="_blank" class="btn-proyecto demo">Ver Demo</a>
-                                    <a href="https://github.com/julianmirandar/Anguil" target="_blank" class="btn-proyecto codigo">Código</a>
+                                    <a href="https://github.com/JulianMirandaR/Anguil.git" target="_blank" class="btn-proyecto codigo">Código</a>
                                 </div>
                             </div>
                         </div>
@@ -87,9 +136,13 @@
                             <div class="contenido-proyecto">
                                 <h3>Actualizador Precios</h3>
                                 <p>Herramienta automatizada para actualizar listas de precios de productos masivamente.</p>
+                                <div class="badges">
+                                    <span class="badge python">Python</span>
+                                    <span class="badge excel">Excel</span>
+                                </div>
                                 <div class="botones-proyecto">
-                                    <a href="https://julianmirandar.github.io/Actualizacion-de-precios/" target="_blank" class="btn-proyecto demo">Ver Demo</a>
-                                    <a href="https://github.com/julianmirandar/Actualizacion-de-precios" target="_blank" class="btn-proyecto codigo">Código</a>
+                                    <a href="https://julianmirandar.github.io/ModificadorExcel/" target="_blank" class="btn-proyecto demo">Ver Demo</a>
+                                    <a href="https://github.com/JulianMirandaR/ModificadorExcel.git" target="_blank" class="btn-proyecto codigo">Código</a>
                                 </div>
                             </div>
                         </div>
@@ -101,9 +154,13 @@
                             <div class="contenido-proyecto">
                                 <h3>Gestor de Gastos</h3>
                                 <p>Aplicación para llevar un control detallado de ingresos y egresos personales.</p>
+                                <div class="badges">
+                                    <span class="badge js">JS</span>
+                                    <span class="badge css">CSS</span>
+                                </div>
                                 <div class="botones-proyecto">
                                     <a href="https://julianmirandar.github.io/Presupuesto/" target="_blank" class="btn-proyecto demo">Ver Demo</a>
-                                    <a href="https://github.com/julianmirandar/Presupuesto" target="_blank" class="btn-proyecto codigo">Código</a>
+                                    <a href="https://github.com/JulianMirandaR/Presupuesto.git" target="_blank" class="btn-proyecto codigo">Código</a>
                                 </div>
                             </div>
                         </div>
@@ -115,9 +172,13 @@
                             <div class="contenido-proyecto">
                                 <h3>Calculadora Web</h3>
                                 <p>Calculadora funcional desarrollada con JavaScript para operaciones matemáticas básicas.</p>
+                                <div class="badges">
+                                    <span class="badge js">JS</span>
+                                    <span class="badge css">CSS</span>
+                                </div>
                                 <div class="botones-proyecto">
                                     <a href="https://julianmirandar.github.io/Calculadora/" target="_blank" class="btn-proyecto demo">Ver Demo</a>
-                                    <a href="https://github.com/julianmirandar/Calculadora" target="_blank" class="btn-proyecto codigo">Código</a>
+                                    <a href="https://github.com/JulianMirandaR/Calculadora.git" target="_blank" class="btn-proyecto codigo">Código</a>
                                 </div>
                             </div>
                         </div>
@@ -129,9 +190,13 @@
                             <div class="contenido-proyecto">
                                 <h3>Stock de Libros</h3>
                                 <p>Sistema de inventario para gestionar una colección de libros y su disponibilidad.</p>
+                                <div class="badges">
+                                    <span class="badge js">JS</span>
+                                    <span class="badge local">LocalStorage</span>
+                                </div>
                                 <div class="botones-proyecto">
                                     <a href="https://julianmirandar.github.io/ColecciondeLibros/" target="_blank" class="btn-proyecto demo">Ver Demo</a>
-                                    <a href="https://github.com/julianmirandar/ColecciondeLibros" target="_blank" class="btn-proyecto codigo">Código</a>
+                                    <a href="https://github.com/JulianMirandaR/ColecciondeLibros.git" target="_blank" class="btn-proyecto codigo">Código</a>
                                 </div>
                             </div>
                         </div>
@@ -143,14 +208,23 @@
                             <div class="contenido-proyecto">
                                 <h3>Contador de Días</h3>
                                 <p>Utilidad para calcular la diferencia de días entre dos fechas específicas.</p>
+                                <div class="badges">
+                                    <span class="badge js">JS</span>
+                                    <span class="badge date">Date API</span>
+                                </div>
                                 <div class="botones-proyecto">
                                     <a href="https://julianmirandar.github.io/CalculadorDeDias/" target="_blank" class="btn-proyecto demo">Ver Demo</a>
-                                    <a href="https://github.com/julianmirandar/CalculadorDeDias" target="_blank" class="btn-proyecto codigo">Código</a>
+                                    <a href="https://github.com/JulianMirandaR/CalculadorDeDias.git" target="_blank" class="btn-proyecto codigo">Código</a>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Paginación -->
+                <div class="swiper-pagination"></div>
+                <!-- Flechas de navegación -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
             <br/> 
         </section>
@@ -197,10 +271,10 @@
             <p>© 2026 Julian Miranda — Desarrollador Front-End</p>
 
             <div class="footer-links">
-                <a href="https://github.com/julianmirandar" target="_blank">GitHub</a>
-                <a href="https://www.linkedin.com/in/juli-miranda-r" target="_blank">LinkedIn</a>
-            <a href="#contacto" target="_blank">Contacto</a>
-        </div>
+                <a href="https://github.com/julianmirandar" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/juli-miranda-r" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="#contacto" title="Contacto"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
     </footer>
     <button id="btn-top">↑</button>
