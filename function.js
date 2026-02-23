@@ -20,6 +20,10 @@ if (document.querySelector('.mySwiper')) {
         slidesPerView: 3,
         spaceBetween: 40,
       },
+      1280: {
+        slidesPerView: 4,
+        spaceBetween: 40,
+      },
     },
     autoplay: {
       delay: 5000,
