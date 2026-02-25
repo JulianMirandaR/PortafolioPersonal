@@ -666,13 +666,13 @@ nav a.active {
 /* TIMELINE (TRAYECTORIA) */
 #trayectoria {
     position: relative;
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
 .timeline {
     position: relative;
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 20px 0;
 }
@@ -728,7 +728,7 @@ nav a.active {
 }
 
 .content {
-    padding: 15px 20px;
+    padding: 20px 30px;
     background-color: #161b22;
     position: relative;
     border-radius: 6px;
@@ -743,20 +743,19 @@ nav a.active {
 
 .content h3 {
     color: #58a6ff;
-    font-size: 1rem;
-    margin-bottom: 4px;
+    font-size: 1.1rem;
+    margin-bottom: 5px;
 }
 
 .content h4 {
     color: #c9d1d9;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     font-weight: 600;
-    font-size: 0.95rem;
 }
 
 .content p {
     color: #8b949e;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
 }
 
 /* Responsive Timeline */
