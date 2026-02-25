@@ -76,13 +76,28 @@ const enviar = () => {
   console.log("Mensaje enviado a Julian Miranda");
 };
 
-// ANIMACIONES AL SCROLL
-const revealOnScroll = () => {
-  sections.forEach(section => {
-    const { top } = section.getBoundingClientRect();
-    if (top < window.innerHeight - 100) {
-      section.classList.add("reveal", "active");
+// ANIMACIONES CON INTERSECTION OBSERVER
+const observerOptions = {
+  root: null,
+  rootMargin: '0px',
+  threshold: 0.15
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
     }
+  });
+}, observerOptions);
+
+const initScrollAnimations = () => {
+  const elementosAAnimar = $$('.servicio-card, .certificado-card, .timeline-item, .skills-grid i, .swiper, #contacto dl, #contacto form, .texto');
+  elementosAAnimar.forEach((el, index) => {
+    el.classList.add('reveal');
+    // Generar un delay en cascada sútil
+    el.style.transitionDelay = `${(index % 6) * 0.1}s`;
+    observer.observe(el);
   });
 };
 
@@ -163,13 +178,12 @@ const typeEffect = () => {
 // SCROLL GLOBAL
 window.addEventListener("scroll", () => {
   toggleBtnTop();
-  revealOnScroll();
   setActiveLink();
 });
 
 // INIT
 document.addEventListener('DOMContentLoaded', () => {
-  revealOnScroll();
+  initScrollAnimations();
   setActiveLink();
   typeEffect();
 });

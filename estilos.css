@@ -9,6 +9,24 @@ html {
     scroll-behavior: smooth;
 }
 
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0d1117;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #30363d;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #58a6ff;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
@@ -49,6 +67,7 @@ header nav ul li a {
 header nav ul li a:hover {
     background: #21262d;
     color: #58a6ff;
+    text-shadow: 0 0 8px rgba(88, 166, 255, 0.6);
 }
 
 /* SECCIONES */
@@ -93,26 +112,10 @@ section {
     font-size: clamp(1.2rem, 3vw, 2rem);
     color: #c9d1d9;
     margin-top: 10px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
 
-.texto,
-.detalles-proyecto,
-#contacto {
-    opacity: 0;
-    animation: fadeIn 1s forwards;
-}
 
-.texto:nth-child(1),
-.detalles-proyecto:nth-child(1),
-#contacto:nth-child(1) {
-    animation-delay: 0.3s;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
 
 /* PERFIL */
 #perfil {
@@ -149,12 +152,15 @@ section {
 
 .skills-grid i {
     font-size: 3.5rem;
-    transition: transform 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: pointer;
+    opacity: 0.8;
 }
 
 .skills-grid i:hover {
-    transform: translateY(-10px);
+    transform: translateY(-10px) scale(1.2);
+    opacity: 1;
+    filter: drop-shadow(0px 10px 15px rgba(255, 255, 255, 0.2));
 }
 
 /* TYPEWRITER CURSOR */
@@ -205,7 +211,7 @@ section {
 .servicio-card:hover {
     transform: translateY(-5px);
     border-color: #58a6ff;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 20px rgba(88, 166, 255, 0.3), 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 
 .servicio-card i {
@@ -253,7 +259,7 @@ section {
 
 .detalles-proyecto:hover {
     transform: translateY(-6px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 25px rgba(88, 166, 255, 0.4), 0 10px 30px rgba(0, 0, 0, 0.8);
     border-color: #58a6ff;
 }
 
@@ -366,6 +372,7 @@ section {
 
 .btn-proyecto.demo:hover {
     background-color: #2ea043;
+    box-shadow: 0 0 15px rgba(46, 160, 67, 0.5);
 }
 
 .btn-proyecto.codigo {
@@ -377,6 +384,8 @@ section {
 .btn-proyecto.codigo:hover {
     background-color: #30363d;
     color: #58a6ff;
+    border-color: #58a6ff;
+    box-shadow: 0 0 15px rgba(88, 166, 255, 0.4);
 }
 
 /* CONTACTO */
@@ -475,11 +484,11 @@ form button:hover {
     transform: scale(1.1);
 }
 
-/* REVEAL */
+/* REVEAL ANIMATION */
 .reveal {
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
 }
 
 .reveal.active {
@@ -492,6 +501,7 @@ nav a.active {
     color: #58a6ff;
     font-weight: bold;
     border-bottom: 2px solid #58a6ff;
+    text-shadow: 0 0 8px rgba(88, 166, 255, 0.6);
 }
 
 /* BTN TOP */
@@ -621,16 +631,32 @@ nav a.active {
     text-decoration: none;
     font-weight: bold;
     font-size: 1rem;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
     z-index: 10;
+    box-shadow: 0 0 15px rgba(88, 166, 255, 0.3);
+    animation: pulseGlow 2.5s infinite;
+}
+
+@keyframes pulseGlow {
+    0% {
+        box-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
+    }
+
+    50% {
+        box-shadow: 0 0 25px rgba(88, 166, 255, 0.6);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(88, 166, 255, 0.3);
+    }
 }
 
 .btn-cv:hover {
     background: #58a6ff;
     color: #0d1117;
-    box-shadow: 0 0 15px rgba(88, 166, 255, 0.6);
+    box-shadow: 0 0 30px rgba(88, 166, 255, 0.9);
     transform: translateY(-3px);
 }
 
@@ -661,6 +687,7 @@ nav a.active {
 .btn-whatsapp:hover {
     background-color: #128c7e;
     transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.6);
 }
 
 /* TIMELINE (TRAYECTORIA) */
@@ -691,14 +718,12 @@ nav a.active {
 }
 
 .timeline-item {
-    padding: 10px 40px;
+    padding: 10px 30px;
+    /* Reducido de 10px 40px */
     position: relative;
     background-color: inherit;
     width: 50%;
     box-sizing: border-box;
-    opacity: 0;
-    /* Para animación futura */
-    animation: fadeIn 1s forwards;
 }
 
 /* Círculos en la línea */
@@ -713,6 +738,21 @@ nav a.active {
     top: 20px;
     border-radius: 50%;
     z-index: 1;
+    animation: timelinePulse 2s infinite;
+}
+
+@keyframes timelinePulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(88, 166, 255, 0.6);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(88, 166, 255, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(88, 166, 255, 0);
+    }
 }
 
 .left {
@@ -728,7 +768,8 @@ nav a.active {
 }
 
 .content {
-    padding: 20px 30px;
+    padding: 12px 20px;
+    /* Reducido de 20px 30px */
     background-color: #161b22;
     position: relative;
     border-radius: 6px;
@@ -739,23 +780,31 @@ nav a.active {
 .content:hover {
     transform: translateY(-5px);
     border-color: #58a6ff;
+    box-shadow: 0 0 20px rgba(88, 166, 255, 0.3);
 }
 
 .content h3 {
     color: #58a6ff;
-    font-size: 1.1rem;
-    margin-bottom: 5px;
+    font-size: 1rem;
+    /* Reducido de 1.1rem */
+    margin-bottom: 2px;
+    /* Reducido de 5px */
 }
 
 .content h4 {
     color: #c9d1d9;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    /* Reducido de 10px */
     font-weight: 600;
+    font-size: 0.95rem;
+    /* Añadido un limite menor */
 }
 
 .content p {
     color: #8b949e;
-    font-size: 0.95rem;
+    font-size: 0.85rem;
+    /* Reducido de 0.95rem */
+    line-height: 1.4;
 }
 
 /* Responsive Timeline */
@@ -766,8 +815,10 @@ nav a.active {
 
     .timeline-item {
         width: 100%;
-        padding-left: 70px;
-        padding-right: 25px;
+        padding-left: 55px;
+        /* Reducido de 70px */
+        padding-right: 15px;
+        /* Reducido de 25px */
     }
 
     .timeline-item::after {
@@ -811,7 +862,7 @@ nav a.active {
     transform: translateY(-5px);
     border-color: #f7df1e;
     /* Un toque dorado para certificados */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 20px rgba(247, 223, 30, 0.3), 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 .certificado-card i {
